@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+
+<div style="background-color: rgb(233, 251, 248);">
+  <div class="container  mb-4">
+    <div class="row">
+      <div class="col-12 text-center text-primary">
+        <br>
+        <h2 class="text-center Titulo">Resultado radar estrategico organizacional</h2>
+        <br>
+        <iframe width="500" height="280" src="https://www.youtube.com/embed/R_eNtRGzvcw" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+
+    <div style="display: block;">
+        <canvas id="barChart"></canvas>
+    </div>
+  </div>
+    <div class="col-10 text-center contenidoGrafico">
+      <div class="canvas-wrapper" *ngIf="isBrowser">
+
+        <canvas #chartCanvas class="bordeCanvas"></canvas>
+      </div>
+    </div>
+    <div class="col-1">
+
+    </div>
+
+  </div>
+  <div class="row justify-content-center mt-2">
+    <div class="col-12">
+      
+      <div class="row p-5">
+        <div *ngFor="let grupoData of datosResultado" class="col-6 p-4" >
+            <h3 class="text-center Titulo">Resultado de {{ grupoData.grupo }}</h3>
+            <h5>Su resultado es {{grupoData.rango}}</h5>
+            <div *ngFor="let item of grupoData.lista" class="justify-text">
+              <p><span class="Titulo">{{ item.titulo }}:</span> {{ item.texto }}</p>
+            </div>
+        </div>
+      </div>  
+      
+    </div>
+  </div>
+  <div class="ms-3 mb-3 text-center">
+    <button type="button" class="btn colorBoton" [routerLink]="['/home-diagnostico']">
+      &nbsp;Regresar al menú
+    </button>
+  </div>
+</div>
+
+<app-footer></app-footer>

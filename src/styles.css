@@ -1,0 +1,21 @@
+body{
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    background-color: rgb(233,251,248)
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.colorBoton{
+    background-color: #000066 !important;
+    color:white !important;
+    font-weight: 550;
+    border-radius: 8%;
+}
+
+.colorBoton:hover{
+    background-color: #ccc !important;
+    color:#000 !important;
+}
